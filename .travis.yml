@@ -1,0 +1,27 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  - yarn test
+notifications:
+  slack: practicetravisci:f7Yph80c76XhpYxYnqBOxkfV
+  email:
+    recipients:
+      - julian.vega@uao.edu.co
+      - ja.vega.g10@gmail.com
+  on_success: always
+  on_failure: always
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  keep_history: true
+  api_key: 1bc8e505-fa84-4bab-abed-0c106e4ee9ca
+  app: practice-travisci-backend
+  on:
+    repo: JAVegaG/travisci-backend
