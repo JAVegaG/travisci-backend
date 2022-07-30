@@ -16,6 +16,8 @@ notifications:
       - julian.vega@uao.edu.co
   on_success: always
   on_failure: always
+before_deploy:
+  - gem install faraday -v 1.10.0
 deploy:
   provider: heroku
   skip_cleanup: true
