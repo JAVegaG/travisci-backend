@@ -18,7 +18,7 @@ notifications:
   on_success: always
   on_failure: always
 deploy:
-  provider: heroku
+  provide: heroku
   skip_cleanup: true
   keep_history: true
   api_key: 1bc8e505-fa84-4bab-abed-0c106e4ee9ca
